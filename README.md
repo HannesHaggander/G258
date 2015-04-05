@@ -11,3 +11,9 @@ this is how you set up our app
 
 #Credits
 names here
+
+
+#how to fork
+use this guide and fork to this repo
+
+[url]https://help.github.com/articles/fork-a-repo/[/url]
