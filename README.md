@@ -11,6 +11,7 @@ this is how you set up our app
 
 #Credits
 names here
+* Hannes H. - Ditchlol - hanhag@student.chalmers.se
 * Dzenan B. - DzenoBa - dzenan@student.chalmers.se
 
 
