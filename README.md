@@ -11,6 +11,7 @@ this is how you set up our app
 
 #Credits
 names here
+* Dzenan B. - DzenoBa - dzenan@student.chalmers.se
 
 
 #how to fork
