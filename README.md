@@ -3,7 +3,7 @@ Repository for our android game application
 
 #Description
 
-A ski game to play on the go and explore all the different slopes
+A ski game where you explore all the different slopes on the go with your phone.
 
 #Setup
 
