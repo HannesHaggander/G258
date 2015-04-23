@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody rb;
 	private PlayerInput PI;
 	private Vector3 jumpVector;
+	private GameController GC;
 
 
 	public bool onGround = false;
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 		PI = GetComponent<PlayerInput>();
 		jumpVector = new Vector3(0, jumpPower, 0);
+		GC = GameObject.Find("_GAMECONTROLLER").GetComponent<GameController>();
+	
 	}
 	
 	// Update is called once per frame
