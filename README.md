@@ -1,19 +1,19 @@
 #Software engineering project
-Repository for our android application
+Repository for our android game application
 
 #Description
 
-set description here
+A ski game where you explore all the different slopes on the go with your phone.
 
 #Setup
 
-this is how you set up our app
+DISCLAIMER: NO BUILDS YET
+
+WHEN we have something built you can download the repo and enter the Assets/Builds folder and run the game from there. Easy.
 
 #Credits
 names here
-
-
-#how to fork
-use this guide and fork to this repo
-
-https://help.github.com/articles/fork-a-repo/
+* Hannes H. - Ditchlol - hanhag@student.chalmers.se
+* Dzenan B. - DzenoBa  - dzenan@student.chalmers.se
+* Max M.    - MaxModig
+* Denise J. - psdenise
