@@ -935,7 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1777518929}
   smoothTime: .200000003
-  xOffset: 7.5
+  xOffset: 10
   yOffset: 0
 --- !u!1001 &1202040155
 Prefab:

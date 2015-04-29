@@ -48,14 +48,18 @@ public class MainMenu : MonoBehaviour {
 
 	}
 
+	float fadeAlpha;
+	float fadeTime = 0.3f;
+
 	void fade(bool inout){
-		float fadeTime = 0.3f;
-		float fadeAlpha = 0;
 		if(inout){
 			fadeAlpha = 100;
 
-		}
+		} else {
+			fadeAlpha = 0;
 
+		}	
+		
 		fadeScreen.CrossFadeAlpha(fadeAlpha, fadeTime, false);
 
 	}
