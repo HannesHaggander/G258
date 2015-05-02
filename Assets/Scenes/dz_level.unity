@@ -780,6 +780,14 @@ Prefab:
       propertyPath: speedX
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 11479864, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
+      propertyPath: defaultspeed.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479864, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
+      propertyPath: maxspeed.x
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
   m_IsPrefabParent: 0
