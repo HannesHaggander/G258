@@ -17,9 +17,8 @@ public class PlayerMovement : MonoBehaviour {
 	public Vector3 maxspeed;
 	public Vector3 gravity;
 	public Vector3 defaultspeed;
-
-
-
+	
+	public bool doubleJumpingEnabled = true;
 	public bool onGround = false;
 
 	// Use this for initialization
@@ -43,11 +42,11 @@ public class PlayerMovement : MonoBehaviour {
 
 		} 
 
-
 		if(PI.jump && onGround){
 			rb.AddForce(jumpVector);
 		}
-		if (onGround == false && PI.jump && doublejump) {
+		// DOUBLE JUMPING
+		if (onGround == false && PI.jump && doublejump && doubleJumpingEnabled) {
 			rb.AddForce(jumpVector);
 			doublejump =false;
 		
