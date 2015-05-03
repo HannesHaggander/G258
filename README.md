@@ -17,3 +17,4 @@ names here
 * Dzenan B. - DzenoBa  - dzenan@student.chalmers.se
 * Max M.    - MaxModig
 * Denise J. - psdenise
+* Yingdong D. - easdfghjkl1
