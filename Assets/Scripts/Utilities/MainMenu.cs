@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour {
 	public void StartButton(){
 		string firstLevelName = "Tutorial";
 		Debug.Log ("loading: " + firstLevelName);
-		//Application.LoadLevel(firstLevelName);
+		Application.LoadLevel("test");
 
 	}
 
@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void LevelSelectButton(){
 		Debug.Log ("pressed level select");
-		fade(true);
+		Application.LoadLevel ("LevelSelect");
 
 	}
 

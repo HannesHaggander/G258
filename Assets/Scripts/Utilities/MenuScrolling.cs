@@ -8,6 +8,10 @@ public class MenuScrolling : MonoBehaviour {
 	public int currentFrame = 0;
 	public float transSpeed = 0.4f;
 
+	public bool moveRight = false,
+			 	moveLeft = false; 
+
+
 	public int xPadding = 5;
 	public int yPadding = 5;
 	private int loopPadding = 0;
@@ -19,8 +23,11 @@ public class MenuScrolling : MonoBehaviour {
 	private GameObject[] givenSubNodes;
 	public bool spawned = false;
 
+	private PlayerInput PI;
+
 	void Awake(){
 		cam = GameObject.Find ("Main Camera").GetComponent<Camera>();
+		PI = GameObject.Find("_GAMECONTROLLER").GetComponent<PlayerInput>();
 
 		foreach(GameObject b in levelButtons){
 			b.transform.position = new Vector3(xPadding * loopPadding, 0, 0);
@@ -43,7 +50,7 @@ public class MenuScrolling : MonoBehaviour {
 		transform.position = temp[currentFrame].transform.position;
 
 
-		if(Input.GetKeyDown(KeyCode.A)){
+		if(Input.GetKeyDown(KeyCode.A) || moveLeft){
 			if(currentFrame > 0){
 				currentFrame--;
 
@@ -55,13 +62,17 @@ public class MenuScrolling : MonoBehaviour {
 
 				}
 			}
+			moveLeft = false; 
+
 		}
 
-		if(Input.GetKeyDown(KeyCode.D)){
+		if(Input.GetKeyDown(KeyCode.D) || moveRight){
 			if(currentFrame < temp.Length -1){
 				currentFrame++;
 
 			}
+			moveRight = false;
+
 		}	
 
 		if(spawned){
@@ -76,6 +87,15 @@ public class MenuScrolling : MonoBehaviour {
 		}
 	}
 
+	public void MoveRight(){
+		moveRight = true;
+
+	}
+
+	public void MoveLeft(){
+		moveLeft = true;
+
+	}
 
 
 	public void SpawnSubNodes(Transform clickPos, GameObject[] subNodes){
