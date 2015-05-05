@@ -1,0 +1,9 @@
+1: there are three Sphere colliders, I figure you tried to add one too many. Please remove 2 of them, they are not needed.
+
+2: Have you tried to make a level yet? please upload one if you have.
+
+3: I cant remember if I did the touch functionallity, but if you did it, how'd it go? Does it work? 
+
+4: have you tried to run the game on a mobile device? 
+
+overall I dont see too many changes, maybe it's just that you havn't uploaded them yet. please do if you have any problems or weird stuff happening.

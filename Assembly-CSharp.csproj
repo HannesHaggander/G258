@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Utilities\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Utilities\SaveAndLoad.cs" />
+     <None Include="Assets\comments\comments.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity 5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
