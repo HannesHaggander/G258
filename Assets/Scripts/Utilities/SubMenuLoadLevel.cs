@@ -7,7 +7,7 @@ public class SubMenuLoadLevel : MonoBehaviour {
 	public string loadlevelName = "Default";
 
 	void Start(){
-		PI = GameObject.Find ("_GAMECONTROLLER").GetComponent<PlayerInput>();
+		PI = GameObject.Find ("PlayerInput").GetComponent<PlayerInput>();
 
 	}
 

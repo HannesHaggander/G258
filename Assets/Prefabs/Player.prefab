@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11406226}
   - 135: {fileID: 13515802}
   - 135: {fileID: 13597058}
+  - 135: {fileID: 13567466}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -102,7 +103,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!114 &11406226
 MonoBehaviour:
@@ -116,6 +117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
+  mouseOne: 0
+  rightTouch: 0
+  leftTouch: 0
+  inMenu: 0
 --- !u!114 &11479864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +146,18 @@ SphereCollider:
   m_GameObject: {fileID: 152968}
   m_Material: {fileID: 13400000, guid: 2be31205a352c6b4d9875c56a6b9d8c7, type: 2}
   m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &13567466
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5

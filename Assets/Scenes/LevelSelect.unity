@@ -87,6 +87,50 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &194132949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 194132951}
+  - 114: {fileID: 194132950}
+  m_Layer: 0
+  m_Name: PlayerInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &194132950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194132949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9eadf24218db914e979ec3781e6c55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: 0
+  mouseOne: 0
+  rightTouch: 0
+  leftTouch: 0
+  inMenu: 0
+--- !u!4 &194132951
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 194132949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.3199997, y: -22.0200005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &383382870
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,10 +199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeLevels:
-  - {fileID: 186586, guid: f0333d26f885ebc4580a6118ee315b55, type: 2}
   - {fileID: 190324, guid: e6c2418ed54825d4ca33fb5b847fbfbc, type: 2}
-  - {fileID: 194954, guid: 0bd80705ab1f5f848b2c1661029f2739, type: 2}
   - {fileID: 186586, guid: f0333d26f885ebc4580a6118ee315b55, type: 2}
+  - {fileID: 194954, guid: 0bd80705ab1f5f848b2c1661029f2739, type: 2}
 --- !u!65 &383382874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -239,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeLevels:
-  - {fileID: 186586, guid: f0333d26f885ebc4580a6118ee315b55, type: 2}
+  - {fileID: 190324, guid: e6c2418ed54825d4ca33fb5b847fbfbc, type: 2}
 --- !u!65 &549767723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -320,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodeLevels:
-  - {fileID: 194954, guid: 0bd80705ab1f5f848b2c1661029f2739, type: 2}
+  - {fileID: 186586, guid: f0333d26f885ebc4580a6118ee315b55, type: 2}
 --- !u!65 &1256689900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -366,47 +409,6 @@ Transform:
   - {fileID: 1935910775}
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1786890423
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1786890425}
-  - 114: {fileID: 1786890424}
-  m_Layer: 0
-  m_Name: _GAMECONTROLLER
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1786890424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1786890423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9eadf24218db914e979ec3781e6c55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jump: 0
-  mouseOne: 0
---- !u!4 &1786890425
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1786890423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &1854881636
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +574,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1935910775}
   - 114: {fileID: 1935910774}
+  - 114: {fileID: 1935910776}
   m_Layer: 0
   m_Name: Pointer
   m_TagString: Untagged
@@ -598,6 +601,8 @@ MonoBehaviour:
   - {fileID: 1256689896}
   currentFrame: 0
   transSpeed: .400000006
+  moveRight: 0
+  moveLeft: 0
   xPadding: 5
   yPadding: 4
   spawned: 0
@@ -613,6 +618,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1731421399}
   m_RootOrder: 5
+--- !u!114 &1935910776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935910773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9eadf24218db914e979ec3781e6c55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: 0
+  mouseOne: 0
+  rightTouch: 0
+  leftTouch: 0
+  inMenu: 0
 --- !u!1 &1973107730
 GameObject:
   m_ObjectHideFlags: 0

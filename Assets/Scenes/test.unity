@@ -358,7 +358,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!65 &337074271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fae86348c7954ead423685d935d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevelName: LevelTwo
 --- !u!1001 &349953559
 Prefab:
   m_ObjectHideFlags: 0
@@ -552,68 +553,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &648556082 stripped
 Transform:
   m_PrefabParentObject: {fileID: 423720, guid: 15cf25dffb329d649968ffc176cad1ff, type: 2}
   m_PrefabInternal: {fileID: 245390066}
---- !u!1 &716882171
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 716882173}
-  - 114: {fileID: 716882172}
-  - 114: {fileID: 716882174}
-  m_Layer: 0
-  m_Name: _GAMECONTROLLER
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &716882172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 716882171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b59e18d1bef88d47bdffd3d982db5f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelStarted: 0
-  levelFinished: 0
-  score: 0
-  cameraTarget: {fileID: 0}
-  gameState: 
---- !u!4 &716882173
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 716882171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.7551842, y: -24.9241295, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &716882174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 716882171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a800cae10ed0eb34d9a841729b2bc695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filePath: 
 --- !u!1001 &777249962
 Prefab:
   m_ObjectHideFlags: 0
@@ -769,7 +713,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152968, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5410494, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
       propertyPath: m_Constraints
@@ -898,7 +842,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15.6800003
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1201,7 +1145,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}

@@ -27,7 +27,7 @@ public class MenuScrolling : MonoBehaviour {
 
 	void Awake(){
 		cam = GameObject.Find ("Main Camera").GetComponent<Camera>();
-		PI = GameObject.Find("_GAMECONTROLLER").GetComponent<PlayerInput>();
+		PI = GetComponent<PlayerInput>();
 
 		foreach(GameObject b in levelButtons){
 			b.transform.position = new Vector3(xPadding * loopPadding, 0, 0);
