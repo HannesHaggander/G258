@@ -42,4 +42,9 @@ public class PauseScreen : MonoBehaviour {
 		Time.timeScale = 1;
 		Application.LoadLevel(Application.loadedLevel);
 	}
+
+	public void ExitToMainmenu () {
+		Time.timeScale = 1;
+		Application.LoadLevel("MainMenu");
+	}
 }
