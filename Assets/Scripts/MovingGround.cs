@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class movingground : MonoBehaviour {
+public class MovingGround : MonoBehaviour {
 	
 	private Vector3 distance;
 	public Vector3 speed;
