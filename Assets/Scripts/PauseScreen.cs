@@ -9,7 +9,7 @@ public class PauseScreen : MonoBehaviour {
 
 	void Awake() {
 		//panel = GetComponent <RectTransform> ();
-		canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+		canvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
 	}
 
 	// Use this for initialization
