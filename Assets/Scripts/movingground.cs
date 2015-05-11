@@ -16,7 +16,7 @@ public class movingground : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {		
+	void FixedUpdate () {		
 		checkSpeed ();
 		if (hasSpeedX || hasSpeedY) {
 			distance += speed;

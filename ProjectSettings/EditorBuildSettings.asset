@@ -10,6 +10,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
   - enabled: 1
-    path: Assets/Scenes/test.unity
+    path: Assets/Scenes/ha/ha1.unity
   - enabled: 1
-    path: Assets/Scenes/levelTwo.unity
+    path: Assets/Scenes/ha/ha2.unity
+  - enabled: 1
+    path: Assets/Scenes/do/do1.unity
+  - enabled: 1
+    path: Assets/Scenes/do/do2.unity
+  - enabled: 1
+    path: Assets/Scenes/dz/dz1.unity
+  - enabled: 1
+    path: Assets/Scenes/su/su1.unity

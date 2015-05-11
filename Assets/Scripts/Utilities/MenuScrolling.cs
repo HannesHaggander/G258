@@ -48,7 +48,8 @@ public class MenuScrolling : MonoBehaviour {
 		}
 
 		transform.position = temp[currentFrame].transform.position;
-
+	
+	
 
 		if(Input.GetKeyDown(KeyCode.A) || moveLeft){
 			if(currentFrame > 0){
@@ -65,7 +66,7 @@ public class MenuScrolling : MonoBehaviour {
 			moveLeft = false; 
 
 		}
-
+		
 		if(Input.GetKeyDown(KeyCode.D) || moveRight){
 			if(currentFrame < temp.Length -1){
 				currentFrame++;
@@ -104,13 +105,16 @@ public class MenuScrolling : MonoBehaviour {
 
 		}
 
+		Debug.Log (subNodes.Length);
+
+
 		givenSubNodes = new GameObject[subNodes.Length];
 		insubMenu = true;
 		int current = 0;
 		
 		foreach(GameObject g in subNodes){
 			givenSubNodes[current] = Instantiate(g, 
-			            clickPos.position + new Vector3(0,(yPadding*current), 0), 
+			            clickPos.position + new Vector3(0, yPadding + (yPadding*current), 0), 
 			            Quaternion.Euler(0,0,90)) as GameObject;
 			
 			current++;

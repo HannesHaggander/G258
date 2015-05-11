@@ -7,12 +7,13 @@ public class EndLevel : MonoBehaviour {
 	public string nextLevelName = "Default";
 
 	void Awake(){
-		GC = GameObject.Find ("_GAMECONTROLLER").GetComponent<GameController>();
+///		GC = GameObject.Find ("_GAMECONTROLLER").GetComponent<GameController>();
 
 	}
 
 	void OnTriggerEnter(Collider col){
-		if(col.gameObject.name.Equals("Player")){
+		Debug.Log (col.name + " entered ");
+		if(col.gameObject.name.Equals("Player") || col.gameObject.name.Equals("player")){
 			Debug.Log ("Level: " + Application.loadedLevelName + " completed!");
 			Application.LoadLevel(nextLevelName);
 

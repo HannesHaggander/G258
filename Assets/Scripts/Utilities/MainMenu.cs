@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour {
 	public void StartButton(){
 		string firstLevelName = "Tutorial";
 		Debug.Log ("loading: " + firstLevelName);
-		Application.LoadLevel("test");
+		Application.LoadLevel("ha1");
 
 	}
 
