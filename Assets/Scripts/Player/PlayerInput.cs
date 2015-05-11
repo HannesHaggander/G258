@@ -7,6 +7,8 @@ public class PlayerInput : MonoBehaviour {
 	public bool mouseOne;
 	public bool rightTouch = false; 
 	public bool leftTouch  = false;
+	public bool returnButtonTouch = false;
+	public bool settingsButtonTouch = false;
 
 	public bool inMenu = false;
 
@@ -21,15 +23,42 @@ public class PlayerInput : MonoBehaviour {
 
 		}
 	}
+	private bool move = false;
+	private int dir = 0; 
+
+	void FixedUpdate(){
+		if(move){
+			move = false;
+			if(dir > 0){
+				MS.MoveRight();
+
+			} else if(dir < 0){
+				MS.MoveLeft();
+
+			}
+			dir = 0;
+		}
+
+	}
 
 	// Update is called once per frame
 	void Update () {
 		jump = Input.GetKeyDown(KeyCode.Space);
 		mouseOne = Input.GetMouseButtonDown(0);
+		returnButtonTouch = Input.GetKeyDown(KeyCode.Escape);
+		//returnButtonTouch = Input.GetKeyDown(KeyCode.P);
+
+		settingsButtonTouch = Input.GetKeyDown(KeyCode.Menu);
+
+		if(settingsButtonTouch){
+			Debug.Log ("menu button pressed, to level select");
+			Application.LoadLevel("LevelSelect");
+
+		}
+		//settingsButtonTouch = Input.GetKeyDown(KeyCode.L);
 
 		if(Input.touchCount > 0){
 			Touch firstTouch = Input.GetTouch(0);
-
 			jump = firstTouch.phase.Equals(TouchPhase.Began);
 
 			if(inMenu){
@@ -42,10 +71,12 @@ public class PlayerInput : MonoBehaviour {
 					firstTouchPosEnd = firstTouch.position;
 
 					if(firstTouchPosStart.x < firstTouchPosEnd.x){
-						MS.MoveLeft();
+						dir = -1;
+						move = true;
 						
 					} else if(firstTouchPosStart.x > firstTouchPosEnd.x){
-						MS.MoveRight();
+						dir = 1;
+						move = true;
 						
 					}
 				}

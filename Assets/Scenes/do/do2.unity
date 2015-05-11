@@ -518,7 +518,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152968, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
       propertyPath: m_Name
-      value: player
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 11479864, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
       propertyPath: maxspeed.x

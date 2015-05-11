@@ -6,8 +6,10 @@ public class PauseScreen : MonoBehaviour {
 	public bool paused = false;
 	private RectTransform panel;
 	private Canvas canvas;
+	public PlayerInput PI;
 
 	void Awake() {
+		PI = GameObject.Find("Player").GetComponent<PlayerInput>();
 		//panel = GetComponent <RectTransform> ();
 		canvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
 	}
@@ -19,7 +21,7 @@ public class PauseScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.P)) {
+		if (PI.returnButtonTouch) {
 			if(paused) {
 				paused = false;
 				canvas.enabled = false;
