@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414292}
   m_Layer: 0
-  m_Name: GroundCheck
+  m_Name: backCheck
   m_TagString: Untagged
   m_Icon: {fileID: -4453645107408684167, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11406226}
   - 135: {fileID: 13515802}
   - 135: {fileID: 13597058}
+  - 135: {fileID: 13561522}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -51,12 +52,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &171906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444072}
+  m_Layer: 0
+  m_Name: frontCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -4453645107408684167, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &414292
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.25999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 448300}
+  m_RootOrder: 2
+--- !u!4 &444072
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.25999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -73,8 +101,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .300000012, y: .300000012, z: 1}
   m_Children:
-  - {fileID: 414292}
+  - {fileID: 444072}
   - {fileID: 482964}
+  - {fileID: 414292}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &482964
@@ -102,7 +131,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!114 &11406226
 MonoBehaviour:
@@ -116,6 +145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: 0
+  mouseOne: 0
+  rightTouch: 0
+  leftTouch: 0
+  inMenu: 0
 --- !u!114 &11479864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,11 +160,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6348627beb89d7c42895a1e9a04d594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 414292}
-  jumpPower: 500
+  frontGroundCheck: {fileID: 444072}
+  backGroundCheck: {fileID: 414292}
+  jumpPower: 800
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  forwardforce: {x: 0, y: 0, z: 0}
+  maxspeed: {x: 0, y: 0, z: 0}
+  gravity: {x: 0, y: 0, z: 0}
+  defaultspeed: {x: 0, y: 0, z: 0}
+  doubleJumpingEnabled: 1
   onGround: 0
 --- !u!135 &13515802
 SphereCollider:
@@ -141,6 +180,18 @@ SphereCollider:
   m_GameObject: {fileID: 152968}
   m_Material: {fileID: 13400000, guid: 2be31205a352c6b4d9875c56a6b9d8c7, type: 2}
   m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &13561522
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5

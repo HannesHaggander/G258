@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour {
 	public void StartButton(){
 		string firstLevelName = "Tutorial";
 		Debug.Log ("loading: " + firstLevelName);
-		//Application.LoadLevel(firstLevelName);
+		Application.LoadLevel("ha1");
 
 	}
 
@@ -38,7 +38,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void LevelSelectButton(){
 		Debug.Log ("pressed level select");
-		fade(true);
+		Application.LoadLevel ("LevelSelect");
 
 	}
 
@@ -48,14 +48,18 @@ public class MainMenu : MonoBehaviour {
 
 	}
 
+	float fadeAlpha;
+	float fadeTime = 0.3f;
+
 	void fade(bool inout){
-		float fadeTime = 0.3f;
-		float fadeAlpha = 0;
 		if(inout){
 			fadeAlpha = 100;
 
-		}
+		} else {
+			fadeAlpha = 0;
 
+		}	
+		
 		fadeScreen.CrossFadeAlpha(fadeAlpha, fadeTime, false);
 
 	}

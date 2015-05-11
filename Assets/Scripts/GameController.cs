@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
 		player = GameObject.Find ("player");
-		cameraTarget = GameObject.Find("CameraTarget").GetComponent<Transform>();
+		//cameraTarget = GameObject.Find("CameraTarget").GetComponent<Transform>();
 		gameState = "menu";
 
 	}
