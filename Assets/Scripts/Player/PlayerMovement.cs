@@ -10,11 +10,15 @@ public class PlayerMovement : MonoBehaviour {
 	public float jumpPower = 100;
 	public LayerMask whatIsGround;
 
+
+
 	private Rigidbody rb;
 	private PlayerInput PI;
 	private Vector3 jumpVector;
 	//private GameController GC;
 	private bool doublejump;
+	private static bool sjump;
+
 	public Vector3 forwardforce;
 	public Vector3 maxspeed;
 	public Vector3 gravity;
@@ -59,8 +63,17 @@ public class PlayerMovement : MonoBehaviour {
 		onGround = frontCheck || backCheck ? true : false;
 
 
+
+		if (sjump == true) {
+			rb.AddForce(jumpVector);
+			sjump = false;
+
+		}
+
+
 		if (onGround == true) {
 			doublejump = true;
+			//rb.velocity.y = Vector3;
 
 		} 
 
@@ -83,4 +96,9 @@ public class PlayerMovement : MonoBehaviour {
 
 
 	}
+
+	public static void spring(){
+		sjump = true;
+	}
 }
+		

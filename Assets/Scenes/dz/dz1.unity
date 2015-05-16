@@ -571,7 +571,7 @@ SphereCollider:
   m_GameObject: {fileID: 395887385}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1312,6 +1312,14 @@ Prefab:
     - target: {fileID: 152968, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 13561522, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13597058, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11535ba6a1085dc4e8a8795ffa0d4ef6, type: 2}
