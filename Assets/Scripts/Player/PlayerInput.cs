@@ -66,7 +66,9 @@ public class PlayerInput : MonoBehaviour {
 		jump = Input.GetKeyDown(KeyCode.Space);
 		mouseOne = Input.GetMouseButtonDown(0);
 		returnButtonTouch = Input.GetKeyDown(KeyCode.Escape);
-		//returnButtonTouch = Input.GetKeyDown(KeyCode.P);
+		if (returnButtonTouch) {
+			GameObject.Find("Main").GetComponent<PauseScreen>().PauseMenu();
+		}
 
 		settingsButtonTouch = Input.GetKeyDown(KeyCode.Menu);
 
