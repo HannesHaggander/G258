@@ -1,16 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PauseScreen.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraFollowTarget.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player\PlayerInput.cs" Line="34" Column="57" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EndLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utilities\LoadLevelButton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utilities\SubMenuLoadLevel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utilities\MainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utilities\MenuScrolling.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\movingground.cs" Line="8" Column="29" />
-      <File FileName="Assets\Scripts\PauseScreen.cs" Line="24" Column="27" />
+      <File FileName="Assets\Scripts\Player\PlayerInput.cs" Line="9" Column="35" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="7" Column="79" />
+      <File FileName="Assets\Scripts\Utilities\LoadLevelButton.cs" Line="7" Column="46" />
+      <File FileName="Assets\Scripts\Utilities\MainMenu.cs" Line="10" Column="73" />
+      <File FileName="Assets\Scripts\Utilities\MenuScrolling.cs" Line="46" Column="26" />
+      <File FileName="Assets\Scripts\Utilities\SaveAndLoad.cs" Line="86" Column="32" />
+      <File FileName="Assets\Scripts\Utilities\SubMenuLoadLevel.cs" Line="7" Column="53" />
+      <File FileName="Assets\Scripts\CameraFollowTarget.cs" Line="24" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

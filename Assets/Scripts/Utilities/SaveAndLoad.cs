@@ -5,9 +5,18 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveAndLoad : MonoBehaviour {
 
+	/**
+	 * Saving progress in a .dat file for usage later on
+	 */
+
 	public string filePath = "";
 	private LevelData data;
 
+	/**
+	 * saves to the /savedInfo.dat file if there is one otherwise it's created
+	 * When the file is fetched it's serialized by a binaryFormatter for later
+	 * use.
+	 */
 	public void Save(){
 		string filePath = Application.persistentDataPath + "/savedInfo.dat";
 		if(!File.Exists(filePath)){
@@ -28,6 +37,10 @@ public class SaveAndLoad : MonoBehaviour {
 		
 	}
 
+	/**
+	 * opens the file and writes the score to the file then closes it again
+	 * can be used in other scripts to save scores.
+	 */
 	public void SaveHighScore(float score){
 		string filePath = Application.persistentDataPath + "/savedInfo.dat";
 		if(!File.Exists(filePath)){
@@ -44,7 +57,12 @@ public class SaveAndLoad : MonoBehaviour {
 		file.Close();
 
 	}
-	
+
+	/**
+	 * To fetch data from our previously saved file we have to make the data readable.
+	 * It still uses a BinaryFormatter where we deserialize the data in the save file
+	 * and retrieves the data.
+	 */
 	public void Load(){
 		if(File.Exists(Application.persistentDataPath + "/savedInfo.dat")){
 			BinaryFormatter bf = new BinaryFormatter();
@@ -63,7 +81,10 @@ public class SaveAndLoad : MonoBehaviour {
 
 }
 
-//container
+	/**
+	 * Container for the saved data, variables can be added or removed as long as 
+	 * theyre not used previously.
+	 */
 [System.Serializable]
 class LevelData{
 	//public int health;

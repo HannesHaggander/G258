@@ -3,6 +3,9 @@ using System.Collections;
 
 public class SubMenuLoadLevel : MonoBehaviour {
 
+	/**
+	 * Used on all sub-levels to load a assigned level 
+	 */
 	private PlayerInput PI;
 	public string loadlevelName = "Default";
 

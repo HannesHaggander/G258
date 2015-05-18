@@ -4,6 +4,11 @@ using UnityEngine.UI;
 
 public class MenuScrolling : MonoBehaviour {
 
+	/**
+	 * Used to scroll through and choose all the 
+	 * different levels in the MenuSelect screen.
+	 */
+
 	public GameObject[] levelButtons;
 	public int currentFrame = 0;
 	public float transSpeed = 0.4f;
@@ -36,7 +41,10 @@ public class MenuScrolling : MonoBehaviour {
 		}
 	}
 
-	// Update is called once per frame
+	/**
+	 * Changes the camera focus depending on the current focused node and the
+	 * input from the player
+	 */
 	void Update () {
 		GameObject[] temp;
 		if(!insubMenu){
@@ -47,9 +55,7 @@ public class MenuScrolling : MonoBehaviour {
 	
 		}
 
-		transform.position = temp[currentFrame].transform.position;
-	
-	
+		transform.position = temp[currentFrame].transform.position;	
 
 		if(Input.GetKeyDown(KeyCode.A) || moveLeft){
 			if(currentFrame > 0){
@@ -60,7 +66,6 @@ public class MenuScrolling : MonoBehaviour {
 					insubMenu = false;
 					spawned = false;
 					DeleteSubNodes();
-
 				}
 			}
 			moveLeft = false; 
@@ -84,10 +89,13 @@ public class MenuScrolling : MonoBehaviour {
 			cam.transform.rotation = Quaternion.Lerp(cam.transform.rotation, 
 			                                         Quaternion.Euler(0,0,0),
 			                                         smooth);
-
 		}
 	}
 
+	/**
+	 * Used from other scripts to easily move the camera target and move
+	 * through the array of levels.
+	 */
 	public void MoveRight(){
 		moveRight = true;
 
@@ -98,7 +106,12 @@ public class MenuScrolling : MonoBehaviour {
 
 	}
 
-
+	/**
+	 * Spawns all the given sub-nodes from the editor. All of the levels are prefabs
+	 * that are in the subNodes parameter. It's flexible to add a (almost) unlimited 
+	 * amount of nodes in one array and spawn them all with correct padding and 
+	 * rotation etc.
+	 */
 	public void SpawnSubNodes(Transform clickPos, GameObject[] subNodes){
 		if(spawned){
 			return;

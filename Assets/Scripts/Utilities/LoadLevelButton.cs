@@ -3,6 +3,10 @@ using System.Collections;
 
 public class LoadLevelButton : MonoBehaviour {
 
+	/**
+	 * Used for the sub-level container buttons 
+	 */
+
 	public GameObject[] nodeLevels;
 
 	private MenuScrolling MS;
@@ -13,6 +17,10 @@ public class LoadLevelButton : MonoBehaviour {
 
 	}
 
+	/**
+	 * if the main node is pressed by either touch or mouse input the given sub-levels
+	 * are displayed from the SpawnNodes script from the Pointer object in the scene.
+	 */
 	void OnMouseOver(){
 		if(PI.mouseOne){
 			Debug.Log (gameObject.name + " button pressed");

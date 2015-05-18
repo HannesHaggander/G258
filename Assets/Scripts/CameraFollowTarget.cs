@@ -3,6 +3,10 @@ using System.Collections;
 
 public class CameraFollowTarget : MonoBehaviour {
 
+	/**
+	 * Follows the assigned target
+	 */
+
 	public Transform target = null;
 	public float smoothTime = 0.2f;
 	public float xOffset, yOffset; 
@@ -15,8 +19,10 @@ public class CameraFollowTarget : MonoBehaviour {
 		}
 
 	}
-	
-	// Update is called once per frame
+
+	/**
+	 * Follows from the objects current position to the targets position 
+	 */
 	void FixedUpdate () {
 		Vector3 temp = target.position;
 		temp.x += xOffset;

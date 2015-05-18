@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
+	/**
+	 * Used to move the player in different ways and providing the option to jump
+	 */
 
 	public Transform frontGroundCheck;
 	public Transform backGroundCheck;
@@ -30,33 +33,29 @@ public class PlayerMovement : MonoBehaviour {
 	private bool backCheck;
 
 	// Use this for initialization
+	/**
+	 * Gets all the required components from the player object to modify.
+	 * 
+	 */
 	void Awake () {
 		doublejump = true;
 		rb = GetComponent<Rigidbody>();
 		PI = GetComponent<PlayerInput>();
 		jumpVector = new Vector3(0, jumpPower, 0);
 		//GC = GameObject.Find("_GAMECONTROLLER").GetComponent<GameController>();
-
-		/**
-		 * OK, so. I would not recommend using this as our speed.  
-		 * I would instead add force as we go and have a maximum
-		 * speed restriction so that we can have longer levels 
-		 * and still keep up with speed. Having a addforce in
-		 * Awake is not the way to go.
-		 * 
-		 * Also, in the editor the default speed is 2000 and 
-		 * jump power at 5000 at the moment. This is WAY to high, 
-		 * it should be set to about between 5-10 depending on the
-		 * prefered speed. 
-		 * I get why the value is so high when you add it in Awake, 
-		 * otherwise nothing would happen. Please reconsider.
-		 * 
-		 */
-		rb.AddForce (defaultspeed);
+		
+		//rb.AddForce (defaultspeed);
 
 	}
 	
 	// Update is called once per frame
+	/**
+	 * Moves the player object forwards 
+	 * Checks if the player is on the defined ground with a linecast from the center of the 
+	 * player to a given transform. If there's a ground inbetween the two transforms, the 
+	 * player is on the ground and is anable to jump.
+	 */
+
 	void FixedUpdate () {
 		frontCheck = Physics.Linecast(transform.position, frontGroundCheck.transform.position, whatIsGround);
 		backCheck = Physics.Linecast(transform.position, backGroundCheck.transform.position, whatIsGround);
