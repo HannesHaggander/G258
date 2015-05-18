@@ -4,20 +4,18 @@ using System.Collections;
 
 public class ReachBoundary: MonoBehaviour {
 
-	public Text gameOverText;
+	private PauseScreen ps;
 
-	void Start ()
-	{
-		gameOverText.text = "";
+	void Start(){
+		ps = GameObject.Find ("Main").GetComponent<PauseScreen> ();
 	}
-
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player")
 		{
 			//Debug.Log ("Reach boundary.");
-			gameOverText.text = "Game Over";
-			StartCoroutine(StartedQuest());
+			//StartCoroutine(StartedQuest());
+			ps.GameOverMenu();
 		}
 
 	}
