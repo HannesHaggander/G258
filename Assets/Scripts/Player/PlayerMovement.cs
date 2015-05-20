@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour {
 	public Transform backGroundCheck;
 
 	public float jumpPower = 100;
+	public float sPower= 1000;
 	public LayerMask whatIsGround;
 
 
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody rb;
 	private PlayerInput PI;
 	private Vector3 jumpVector;
+	private Vector3 springVector;
 	//private GameController GC;
 	private bool doublejump;
 	private static bool sjump;
@@ -42,9 +44,10 @@ public class PlayerMovement : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 		PI = GetComponent<PlayerInput>();
 		jumpVector = new Vector3(0, jumpPower, 0);
+		springVector= new Vector3(0, sPower, 0);
 		//GC = GameObject.Find("_GAMECONTROLLER").GetComponent<GameController>();
 		
-		//rb.AddForce (defaultspeed);
+		rb.AddForce (defaultspeed);
 
 	}
 	
@@ -64,7 +67,10 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		if (sjump == true) {
-			rb.AddForce(jumpVector);
+			Vector3 temp = rb.velocity;
+			temp.y= 0;
+			rb.velocity = temp;
+			rb.AddForce(springVector);
 			sjump = false;
 
 		}
@@ -76,17 +82,23 @@ public class PlayerMovement : MonoBehaviour {
 
 		} 
 
+		//check jump input is trigged
 		if(PI.jump && onGround){
 			rb.AddForce(jumpVector);
 		
 		}
 
+		//check double jump
 		if (onGround == false && PI.jump && doublejump && doubleJumpingEnabled) {
+			Vector3 temp = rb.velocity;
+			temp.y= 0;
+			rb.velocity = temp;
 			rb.AddForce(jumpVector);
 			doublejump =false;
 		
 		}
 
+		//maxspeed limit
 		if (rb.velocity.x < maxspeed.x) {
 			rb.AddForce (forwardforce);
 
@@ -96,6 +108,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
+	//spring check
 	public static void spring(){
 		sjump = true;
 	}
