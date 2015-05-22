@@ -2703,7 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fae86348c7954ead423685d935d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: su1
+  nextLevelName: dz2
 --- !u!212 &2109925054
 SpriteRenderer:
   m_ObjectHideFlags: 0
