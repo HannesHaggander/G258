@@ -7,7 +7,7 @@ public class ReachBoundary: MonoBehaviour {
 	private PauseScreen ps;
 
 	void Start(){
-		ps = GameObject.Find ("main").GetComponent<PauseScreen> ();
+		ps = GameObject.Find ("Main").GetComponent<PauseScreen> ();
 	}
 
 	void OnTriggerEnter(Collider other) {
