@@ -7,15 +7,9 @@ public class PlayerMovement : MonoBehaviour {
 	 * Used to move the player in different ways and providing the option to jump
 	 */
 
-	public Transform frontGroundCheck;
-	public Transform backGroundCheck;
-
 	public float jumpPower = 100;
 	public float sPower= 1000;
-	public LayerMask whatIsGround;
-
-
-
+	
 	private Rigidbody rb;
 	private PlayerInput PI;
 	private Vector3 jumpVector;
@@ -31,8 +25,8 @@ public class PlayerMovement : MonoBehaviour {
 	
 	public bool doubleJumpingEnabled = true;
 	public bool onGround = false;
-	private bool frontCheck;
-	private bool backCheck;
+
+	private Animator anim;
 
 	// Use this for initialization
 	/**
@@ -43,14 +37,29 @@ public class PlayerMovement : MonoBehaviour {
 		doublejump = true;
 		rb = GetComponent<Rigidbody>();
 		PI = GetComponent<PlayerInput>();
+		anim = GetComponent<Animator> ();
+
 		jumpVector = new Vector3(0, jumpPower, 0);
 		springVector= new Vector3(0, sPower, 0);
 		//GC = GameObject.Find("_GAMECONTROLLER").GetComponent<GameController>();
 		
-		rb.AddForce (defaultspeed);
+		rb.velocity = new Vector3(defaultspeed.x, defaultspeed.y, 0);
+	}
+
+	void Update() {
+		anim.SetBool ("Grounded", onGround);
+		anim.SetFloat("Speed", rb.velocity.x);	
+
+		if (rb.velocity.x > 0.1f) {
+			transform.localScale = new Vector3 (20, 20, 1);
+		}
+
+		if (rb.velocity.x < -0.1f) {
+			transform.localScale = new Vector3 (-20, 20, 1);
+		}
 
 	}
-	
+
 	// Update is called once per frame
 	/**
 	 * Moves the player object forwards 
@@ -60,11 +69,9 @@ public class PlayerMovement : MonoBehaviour {
 	 */
 
 	void FixedUpdate () {
-		frontCheck = Physics.Linecast(transform.position, frontGroundCheck.transform.position, whatIsGround);
-		backCheck = Physics.Linecast(transform.position, backGroundCheck.transform.position, whatIsGround);
-		onGround = frontCheck || backCheck ? true : false;
-
-
+		//frontCheck = Physics.Linecast(transform.position, frontGroundCheck.transform.position, whatIsGround);
+		//backCheck = Physics.Linecast(transform.position, backGroundCheck.transform.position, whatIsGround);
+		//onGround = frontCheck || backCheck ? true : false;
 
 		if (sjump == true) {
 			Vector3 temp = rb.velocity;
@@ -90,6 +97,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		//check double jump
 		if (onGround == false && PI.jump && doublejump && doubleJumpingEnabled) {
+			Debug.Log ("double");
 			Vector3 temp = rb.velocity;
 			temp.y= 0;
 			rb.velocity = temp;
@@ -98,13 +106,16 @@ public class PlayerMovement : MonoBehaviour {
 		
 		}
 
-		//maxspeed limit
-		if (rb.velocity.x < maxspeed.x) {
-			rb.AddForce (forwardforce);
 
+		rb.AddForce (forwardforce);
+		//maxspeed limit
+		if (rb.velocity.x > maxspeed.x) {
+			rb.velocity = new Vector3(maxspeed.x, rb.velocity.y, 0);
 		}
 
-
+		if (rb.velocity.x < -maxspeed.x) {
+			rb.velocity = new Vector3(-maxspeed.x, rb.velocity.y, 0);
+		}
 
 	}
 
