@@ -1992,11 +1992,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454152, guid: 12d861f5c14334949912929789a2b85a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.2999992
+      value: -17.2800007
       objectReference: {fileID: 0}
     - target: {fileID: 454152, guid: 12d861f5c14334949912929789a2b85a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -37.7000008
+      value: -33.2299995
       objectReference: {fileID: 0}
     - target: {fileID: 454152, guid: 12d861f5c14334949912929789a2b85a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2025,6 +2025,22 @@ Prefab:
     - target: {fileID: 109274, guid: 12d861f5c14334949912929789a2b85a, type: 2}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553428, guid: 12d861f5c14334949912929789a2b85a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6548384, guid: 12d861f5c14334949912929789a2b85a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21211374, guid: 12d861f5c14334949912929789a2b85a, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446292, guid: 12d861f5c14334949912929789a2b85a, type: 2}
+      propertyPath: maxspeed.x
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12d861f5c14334949912929789a2b85a, type: 2}

@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update() {
 		anim.SetBool ("Grounded", onGround);
-		anim.SetFloat("Speed", rb.velocity.x);	
+		anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
 		if (rb.velocity.x > 0.1f) {
 			transform.localScale = new Vector3 (20, 20, 1);
