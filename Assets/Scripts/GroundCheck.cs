@@ -11,10 +11,14 @@ public class GroundCheck : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider other){
-		pm.onGround = true;
+		if (other.gameObject.layer == 8) {
+			pm.onGround = true;
+		}
 	}
 
 	void OnTriggerExit(Collider other){
-		pm.onGround = false;
+		if (other.gameObject.layer == 8) {
+			pm.onGround = false;
+		}
 	}
 }
