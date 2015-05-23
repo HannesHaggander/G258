@@ -61,4 +61,8 @@ public class PauseScreen : MonoBehaviour {
 		Time.timeScale = 1;
 		Application.LoadLevel("MainMenu");
 	}
+
+	public void Quit () {
+		Application.Quit ();
+	}
 }
