@@ -235,6 +235,10 @@ Prefab:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 11427162, guid: 2172a9463c7238149a86cf73c9dc5e15, type: 2}
+      propertyPath: nextLevelName
+      value: su1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2172a9463c7238149a86cf73c9dc5e15, type: 2}
   m_IsPrefabParent: 0

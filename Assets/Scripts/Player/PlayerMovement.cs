@@ -61,6 +61,42 @@ public class PlayerMovement : MonoBehaviour {
 			transform.localScale = new Vector3 (-20, 20, 1);
 		}
 
+		if (sjump == true) {
+			Vector3 temp = rb.velocity;
+			temp.y= 0;
+			rb.velocity = temp;
+			rb.AddForce(springVector);
+			sjump = false;
+			
+		}
+		
+		
+		if (onGround) {
+			doublejump = true;
+			Vector3 moveTemp = rb.velocity;
+			moveTemp.x = movementSpeed;
+			rb.velocity = moveTemp;
+			//rb.velocity.y = Vector3;
+			
+		} 
+		
+		//check jump input is trigged
+		if(PI.jump && onGround){
+			rb.AddForce(jumpVector);
+			
+		}
+		
+		//check double jump
+		if (onGround == false && PI.jump && doublejump && doubleJumpingEnabled) {
+			Debug.Log ("double");
+			Vector3 temp = rb.velocity;
+			temp.y= 0;
+			rb.velocity = temp;
+			rb.AddForce(jumpVector);
+			doublejump =false;
+			
+		}
+
 	}
 
 	// Update is called once per frame
@@ -74,43 +110,7 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate () {
 		frontCheck = Physics.Linecast(transform.position, frontGroundCheck.transform.position, whatIsGround);
 		backCheck = Physics.Linecast(transform.position, backGroundCheck.transform.position, whatIsGround);
-		onGround = frontCheck || backCheck ? true : false;
-
-		if (sjump == true) {
-			Vector3 temp = rb.velocity;
-			temp.y= 0;
-			rb.velocity = temp;
-			rb.AddForce(springVector);
-			sjump = false;
-
-		}
-
-
-		if (onGround) {
-			doublejump = true;
-			Vector3 moveTemp = rb.velocity;
-			moveTemp.x = movementSpeed;
-			rb.velocity = moveTemp;
-			//rb.velocity.y = Vector3;
-
-		} 
-
-		//check jump input is trigged
-		if(PI.jump && onGround){
-			rb.AddForce(jumpVector);
-		
-		}
-
-		//check double jump
-		if (onGround == false && PI.jump && doublejump && doubleJumpingEnabled) {
-			Debug.Log ("double");
-			Vector3 temp = rb.velocity;
-			temp.y= 0;
-			rb.velocity = temp;
-			rb.AddForce(jumpVector);
-			doublejump =false;
-		
-		}
+		onGround = frontCheck || backCheck ? true : false;	
 
 		//maxspeed limit
 		if (rb.velocity.x > 0.1f) {
