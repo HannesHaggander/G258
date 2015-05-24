@@ -106,15 +106,19 @@ public class PlayerMovement : MonoBehaviour {
 		
 		}
 
-
-		rb.AddForce (forwardforce);
 		//maxspeed limit
-		if (rb.velocity.x > maxspeed.x) {
-			rb.velocity = new Vector3(maxspeed.x, rb.velocity.y, 0);
+		if (rb.velocity.x > 0.1f) {
+			rb.AddForce (forwardforce);
+			if (rb.velocity.x > maxspeed.x) {
+				rb.velocity = new Vector3 (maxspeed.x, rb.velocity.y, 0);
+			}
 		}
 
-		if (rb.velocity.x < -maxspeed.x) {
-			rb.velocity = new Vector3(-maxspeed.x, rb.velocity.y, 0);
+		if (rb.velocity.x < -0.1f) {
+			rb.AddForce (forwardforce * -1);
+			if (rb.velocity.x < -maxspeed.x) {
+				rb.velocity = new Vector3 (-maxspeed.x, rb.velocity.y, 0);
+			}
 		}
 
 	}
