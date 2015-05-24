@@ -1,0 +1,181 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 670 (ID=0x1189)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.073 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Unity 5\Projects\G257\Builds\compbuild\demoBuild_pc_Data\Managed\System.dll (this message is harmless)
+pressed level select
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+MainMenu:LevelSelectButton() (at E:\Unity 5\Projects\G257\Assets\Scripts\Utilities\MainMenu.cs:50)
+UnityEngine.Events.InvokableCall:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:110)
+UnityEngine.Events.InvokableCallList:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:574)
+UnityEngine.Events.UnityEventBase:Invoke(Object[]) (at C:\buildslave\unity\build\Runtime\Export\UnityEvent.cs:716)
+UnityEngine.Events.UnityEvent:Invoke() (at C:\buildslave\unity\build\Runtime\Export\UnityEvent_0.cs:53)
+UnityEngine.UI.Button:Press() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:35)
+UnityEngine.UI.Button:OnPointerClick(PointerEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\UI\Core\Button.cs:44)
+UnityEngine.EventSystems.ExecuteEvents:Execute(IPointerClickHandler, BaseEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:52)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\ExecuteEvents.cs:269)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData) (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:358)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:249)
+UnityEngine.EventSystems.StandaloneInputModule:Process() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\InputModules\StandaloneInputModule.cs:160)
+UnityEngine.EventSystems.EventSystem:Update() (at C:\buildslave\unity\build\Extensions\guisystem\UnityEngine.UI\EventSystem\EventSystem.cs:272)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/Utilities/MainMenu.cs Line: 50)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.376991 ms
+System memory in use before: 13.6 MB.
+System memory in use after: 13.6 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 248.
+Total: 0.326566 ms (FindLiveObjects: 0.043785 ms CreateObjectMapping: 0.021892 ms MarkObjects: 0.252496 ms  DeleteObjects: 0.006202 ms)
+
+level1 hannes button pressed
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+LoadLevelButton:OnMouseOver() (at E:\Unity 5\Projects\G257\Assets\Scripts\Utilities\LoadLevelButton.cs:26)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:179)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:135)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/Utilities/LoadLevelButton.cs Line: 26)
+
+4
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+MenuScrolling:SpawnSubNodes(Transform, GameObject[]) (at E:\Unity 5\Projects\G257\Assets\Scripts\Utilities\MenuScrolling.cs:121)
+LoadLevelButton:OnMouseOver() (at E:\Unity 5\Projects\G257\Assets\Scripts\Utilities\LoadLevelButton.cs:29)
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+UnityEngine.HitInfo:SendMessage(String) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:17)
+UnityEngine.SendMouseEvents:SendEvents(Int32, HitInfo) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:179)
+UnityEngine.SendMouseEvents:DoSendMouseEvents(Int32, Int32) (at C:\buildslave\unity\build\Runtime\Export\MouseEvents.cs:135)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/Utilities/MenuScrolling.cs Line: 121)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.524696 ms
+System memory in use before: 17.1 MB.
+System memory in use after: 17.1 MB.
+
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 703.
+Total: 0.364149 ms (FindLiveObjects: 0.053272 ms CreateObjectMapping: 0.021527 ms MarkObjects: 0.259064 ms  DeleteObjects: 0.028825 ms)
+
+double
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+PlayerMovement:FixedUpdate() (at E:\Unity 5\Projects\G257\Assets\Scripts\Player\PlayerMovement.cs:106)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/Player/PlayerMovement.cs Line: 106)
+
+double
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+PlayerMovement:FixedUpdate() (at E:\Unity 5\Projects\G257\Assets\Scripts\Player\PlayerMovement.cs:106)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/Player/PlayerMovement.cs Line: 106)
+
+Player entered 
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:15)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 15)
+
+Level: ha3 completed!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:17)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 17)
+
+Player entered 
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:15)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 15)
+
+Level: ha3 completed!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:17)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 17)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.646334 ms
+System memory in use before: 11.5 MB.
+System memory in use after: 11.5 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 820.
+Total: 0.458288 ms (FindLiveObjects: 0.064948 ms CreateObjectMapping: 0.028460 ms MarkObjects: 0.349554 ms  DeleteObjects: 0.013865 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.459151 ms
+System memory in use before: 11.5 MB.
+System memory in use after: 11.5 MB.
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 820.
+Total: 0.356486 ms (FindLiveObjects: 0.060205 ms CreateObjectMapping: 0.017149 ms MarkObjects: 0.272929 ms  DeleteObjects: 0.005108 ms)
+
+Player entered 
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:15)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 15)
+
+Level: ha4 completed!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:17)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 17)
+
+Player entered 
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:15)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 15)
+
+Level: ha4 completed!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+EndLevel:OnTriggerEnter(Collider) (at E:\Unity 5\Projects\G257\Assets\Scripts\EndLevel.cs:17)
+ 
+(Filename: E:/Unity 5/Projects/G257/Assets/Scripts/EndLevel.cs Line: 17)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.838492 ms
+System memory in use before: 11.9 MB.
+System memory in use after: 11.9 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 703.
+Total: 0.336053 ms (FindLiveObjects: 0.053637 ms CreateObjectMapping: 0.016784 ms MarkObjects: 0.253955 ms  DeleteObjects: 0.010581 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.709689 ms
+System memory in use before: 11.8 MB.
+System memory in use after: 11.9 MB.
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 703.
+Total: 0.539656 ms (FindLiveObjects: 0.079908 ms CreateObjectMapping: 0.029190 ms MarkObjects: 0.419975 ms  DeleteObjects: 0.008757 ms)
+

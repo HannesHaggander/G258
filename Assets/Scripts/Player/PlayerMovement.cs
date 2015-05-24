@@ -16,15 +16,19 @@ public class PlayerMovement : MonoBehaviour {
 	private Vector3 springVector;
 	//private GameController GC;
 	private bool doublejump;
-	private static bool sjump;
+	public bool sjump;
 
 	public Vector3 forwardforce;
 	public Vector3 maxspeed;
-	public Vector3 gravity;
-	public Vector3 defaultspeed;
 	
 	public bool doubleJumpingEnabled = true;
 	public bool onGround = false;
+	public bool frontCheck;
+	public bool backCheck;
+	public float movementSpeed;
+	public Transform frontGroundCheck;
+	public Transform backGroundCheck;
+	public LayerMask whatIsGround;
 
 	private Animator anim;
 
@@ -42,8 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 		jumpVector = new Vector3(0, jumpPower, 0);
 		springVector= new Vector3(0, sPower, 0);
 		//GC = GameObject.Find("_GAMECONTROLLER").GetComponent<GameController>();
-		
-		rb.velocity = new Vector3(defaultspeed.x, defaultspeed.y, 0);
+
 	}
 
 	void Update() {
@@ -69,9 +72,9 @@ public class PlayerMovement : MonoBehaviour {
 	 */
 
 	void FixedUpdate () {
-		//frontCheck = Physics.Linecast(transform.position, frontGroundCheck.transform.position, whatIsGround);
-		//backCheck = Physics.Linecast(transform.position, backGroundCheck.transform.position, whatIsGround);
-		//onGround = frontCheck || backCheck ? true : false;
+		frontCheck = Physics.Linecast(transform.position, frontGroundCheck.transform.position, whatIsGround);
+		backCheck = Physics.Linecast(transform.position, backGroundCheck.transform.position, whatIsGround);
+		onGround = frontCheck || backCheck ? true : false;
 
 		if (sjump == true) {
 			Vector3 temp = rb.velocity;
@@ -83,8 +86,11 @@ public class PlayerMovement : MonoBehaviour {
 		}
 
 
-		if (onGround == true) {
+		if (onGround) {
 			doublejump = true;
+			Vector3 moveTemp = rb.velocity;
+			moveTemp.x = movementSpeed;
+			rb.velocity = moveTemp;
 			//rb.velocity.y = Vector3;
 
 		} 
@@ -124,7 +130,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	//spring check
-	public static void spring(){
+	public void spring(){
 		sjump = true;
 	}
 }

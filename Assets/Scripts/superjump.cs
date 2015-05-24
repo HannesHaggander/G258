@@ -9,7 +9,7 @@ public class superjump : MonoBehaviour {
 			Debug.Log ("jump");
 			//Destroy(this.gameObject);
 			//CoinController.increaseCoins();
-			PlayerMovement.spring();
+			GameObject.Find("Player").GetComponent<PlayerMovement>().sjump = true;
 		}
 	}
 }

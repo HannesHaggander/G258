@@ -7,10 +7,8 @@ public class PauseScreen : MonoBehaviour {
 	public bool paused = false;
 	private RectTransform panel;
 	private Canvas canvas;
-	//public PlayerInput PI;
 
 	void Awake() {
-		//PI = GameObject.Find("Player").GetComponent<PlayerInput>();
 		//panel = GetComponent <RectTransform> ();
 		canvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
 		ShowPauseHideGameOverMenu ();
@@ -45,6 +43,8 @@ public class PauseScreen : MonoBehaviour {
 			Time.timeScale = 0;
 		}
 	}
+
+	// buttons below
 
 	public void ResumeGame () {
 		paused = false;
