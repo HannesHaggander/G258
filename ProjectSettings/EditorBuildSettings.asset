@@ -24,4 +24,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/dz/dz1.unity
   - enabled: 1
+    path: Assets/Scenes/dz/dz2.unity
+  - enabled: 1
+    path: Assets/Scenes/dz/dz3.unity
+  - enabled: 1
     path: Assets/Scenes/su/su1.unity
