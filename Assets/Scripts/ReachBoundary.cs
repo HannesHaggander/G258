@@ -20,9 +20,11 @@ public class ReachBoundary: MonoBehaviour {
 
 	}
 
+	/* // For StartCoroutine
 	IEnumerator StartedQuest()
 	{
 		yield return new WaitForSeconds(2);
 		Application.LoadLevel(Application.loadedLevel);
 	}
+	*/
 }

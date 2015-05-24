@@ -7,6 +7,10 @@ public class GroundCheck : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		/* gameObject is a local variable of type GameObject which is inherited from Component. 
+		 * It allows one to access the instance of the GameObject to which this component is attached.
+		 * Here gameObject = GameObject "groundCheck"
+		 */
 		pm = gameObject.GetComponentInParent<PlayerMovement> ();
 	}
 	
