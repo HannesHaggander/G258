@@ -13,7 +13,7 @@ Go to Builds -> Final
 
 for Android devices
 
-	Transfer the HoppaEllie_AndroidBuild.apk to your phone and install the application like you would any other android application.
+	Transfer the HoppaEllie_AndroidBuild.apk to your android device and install
 
 for PC 
 
