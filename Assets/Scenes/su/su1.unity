@@ -435,7 +435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423720, guid: 15cf25dffb329d649968ffc176cad1ff, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -44.7000008
+      value: -42.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 423720, guid: 15cf25dffb329d649968ffc176cad1ff, type: 2}
       propertyPath: m_LocalPosition.z
@@ -598,7 +598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423720, guid: 15cf25dffb329d649968ffc176cad1ff, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -44.9000015
+      value: -38.4000015
       objectReference: {fileID: 0}
     - target: {fileID: 423720, guid: 15cf25dffb329d649968ffc176cad1ff, type: 2}
       propertyPath: m_LocalPosition.z
@@ -655,8 +655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a1eb89fc0e6a145b178b9f40f58f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .100000001, y: 0, z: 0}
-  maxdistance: {x: 5, y: 0, z: 0}
 --- !u!1001 &1223688655
 Prefab:
   m_ObjectHideFlags: 0
@@ -790,8 +788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a1eb89fc0e6a145b178b9f40f58f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: .100000001, y: .100000001, z: 0}
-  maxdistance: {x: 5, y: 5, z: 0}
 --- !u!1001 &1457492933
 Prefab:
   m_ObjectHideFlags: 0
@@ -912,8 +908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a1eb89fc0e6a145b178b9f40f58f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: .100000001, z: 0}
-  maxdistance: {x: 0, y: 5, z: 0}
 --- !u!114 &1688736534 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11426524, guid: e57c10f01e29044e4ac13774419e468a,
@@ -939,8 +933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a1eb89fc0e6a145b178b9f40f58f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: -.100000001, y: .100000001, z: 0}
-  maxdistance: {x: 5, y: 5, z: 0}
 --- !u!1001 &1788762841
 Prefab:
   m_ObjectHideFlags: 0
