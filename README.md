@@ -1,13 +1,9 @@
-#Software engineering project
-Repository for our android game application
-
-#Description
-
+#Hoppa Ellie Game
 Android game application built with Unity3D. 
 A 2D platformer where the player guides Ellie through levels and advances through the world.
 Reach the goal, avoid traps, and collect coins to get a high score!
 
-#Setup
+#Setup installation
 
 Go to Builds -> Final
 
@@ -27,3 +23,5 @@ names here
 * Denise J. - psdenise
 * Yingdong D. - easdfghjkl1
 * YuHsuan S. - asu185
+
+Built at Chalmers University of Technology 2015
