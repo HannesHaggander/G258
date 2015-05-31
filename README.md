@@ -3,13 +3,21 @@ Repository for our android game application
 
 #Description
 
-A ski game where you explore all the different slopes on the go with your phone.
+Android game application built with Unity3D. 
+A 2D platformer where the player guides Ellie through levels and advances through the world.
+Reach the goal, avoid traps, and collect coins to get a high score!
 
 #Setup
 
-DISCLAIMER: NO BUILDS YET
+Go to Builds -> Final
 
-WHEN we have something built you can download the repo and enter the Assets/Builds folder and run the game from there. Easy.
+for Android devices
+
+	Transfer the HoppaEllie_AndroidBuild.apk to your phone and install the application like you would any other android application.
+
+for PC 
+
+	Run the HoppaEllie_windowsBuild.exe
 
 #Credits
 names here
